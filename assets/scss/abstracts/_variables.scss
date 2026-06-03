@@ -1,0 +1,90 @@
+// ===================================================
+// VARIABLES
+// ===================================================
+
+// --- Couleurs ---
+$color-primary:     #6c63ff;
+$color-primary-dark:#5a52d5;
+$color-secondary:   #ff6584;
+$color-accent:      #43e97b;
+
+$color-bg:          #0f0f13;
+$color-bg-alt:      #1a1a24;
+$color-surface:     #22222e;
+
+$color-text:        #e8e8f0;
+$color-text-muted:  #9090a8;
+$color-white:       #ffffff;
+$color-black:       #000000;
+
+// --- Typographie ---
+// html { font-size: 62.5% } => 1rem = 10px
+$font-family-base:  'Segoe UI', system-ui, -apple-system, sans-serif;
+
+$font-size-xs:      1.2rem;   // 12px
+$font-size-sm:      1.4rem;   // 14px
+$font-size-base:    1.6rem;   // 16px
+$font-size-md:      1.8rem;   // 18px
+$font-size-lg:      2.4rem;   // 24px
+$font-size-xl:      3.2rem;   // 32px
+$font-size-2xl:     4.8rem;   // 48px
+$font-size-3xl:     6.4rem;   // 64px
+
+$font-weight-regular: 400;
+$font-weight-medium:  500;
+$font-weight-semibold:600;
+$font-weight-bold:    700;
+
+$line-height-tight:  1.2;
+$line-height-base:   1.6;
+$line-height-loose:  1.8;
+
+// --- Espacement (base = 8px) ---
+$space-1:  0.8rem;   //  8px
+$space-2:  1.6rem;   // 16px
+$space-3:  2.4rem;   // 24px
+$space-4:  3.2rem;   // 32px
+$space-5:  4.0rem;   // 40px
+$space-6:  4.8rem;   // 48px
+$space-8:  6.4rem;   // 64px
+$space-10: 8.0rem;   // 80px
+$space-12: 9.6rem;   // 96px
+
+// --- Layout ---
+$container-max-width: 120rem;  // 1200px
+$container-padding:   $space-2;
+
+// --- Bordures ---
+$border-radius-sm:  0.4rem;
+$border-radius-md:  0.8rem;
+$border-radius-lg:  1.6rem;
+$border-radius-full: 9999px;
+
+$border-color:      rgba($color-text, 0.1);
+
+// --- Ombres ---
+$shadow-sm:  0 0.2rem 0.8rem rgba($color-black, 0.2);
+$shadow-md:  0 0.4rem 2.0rem rgba($color-black, 0.3);
+$shadow-lg:  0 0.8rem 4.0rem rgba($color-black, 0.4);
+$shadow-glow: 0 0 2.4rem rgba($color-primary, 0.4);
+
+// --- Transitions ---
+$transition-fast:   0.15s ease;
+$transition-base:   0.3s ease;
+$transition-slow:   0.5s ease;
+
+// --- Breakpoints ---
+$bp-xs:  37.5em;   // 600px
+$bp-sm:  48em;     // 768px
+$bp-md:  62em;     // 992px
+$bp-lg:  75em;     // 1200px
+$bp-xl:  87.5em;   // 1400px
+
+// --- Z-index ---
+$z-negative: -1;
+$z-base:      0;
+$z-dropdown:  10;
+$z-sticky:    20;
+$z-overlay:   30;
+$z-modal:     40;
+$z-toast:     50;

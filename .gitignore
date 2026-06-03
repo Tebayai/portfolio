@@ -1,0 +1,31 @@
+# Dépendances Node
+node_modules/
+
+# Cache Sass
+.sass-cache/
+*.css.map
+
+# Build / dist (décommenter si tu génères un dossier de prod)
+# dist/
+
+# Éditeurs
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+
+# Variables d'environnement
+.env
+.env.local
+.env.*.local

@@ -1,0 +1,23 @@
+// ===================================================
+// MAIN — Point d'entrée SCSS
+// Architecture : 7-1 pattern (simplifié)
+// ===================================================
+
+// 1. Base
+@use 'base/reset';
+@use 'base/typography';
+
+// 2. Layout
+@use 'layout/grid';
+@use 'layout/header';
+@use 'layout/footer';
+
+// 3. Components
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/forms';
+
+// 4. Pages
+@use 'pages/hero';
+@use 'pages/projects';
+@use 'pages/contact';

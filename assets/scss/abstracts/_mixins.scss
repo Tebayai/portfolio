@@ -1,0 +1,91 @@
+// ===================================================
+// MIXINS
+// ===================================================
+@use 'variables' as *;
+@use 'sass:list';
+
+// --- Responsive (mobile-first) ---
+@mixin respond-to($bp) {
+  @media (min-width: #{$bp}) {
+    @content;
+  }
+}
+
+// --- Flex helpers ---
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// --- Grid ---
+@mixin grid($cols: 1, $gap: $space-3) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  gap: $gap;
+}
+
+// --- Typographie tronquée ---
+@mixin truncate($lines: 1) {
+  @if $lines == 1 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+// --- Pseudo-élément de base ---
+@mixin pseudo($content: '', $display: block, $pos: absolute) {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+// --- Overlay ---
+@mixin overlay($bg: rgba($color-black, 0.5), $z: $z-overlay) {
+  position: fixed;
+  inset: 0;
+  background: $bg;
+  z-index: $z;
+}
+
+// --- Focus visible accessible ---
+@mixin focus-ring($color: $color-primary) {
+  &:focus-visible {
+    outline: 0.2rem solid $color;
+    outline-offset: 0.3rem;
+  }
+}
+
+// --- Bouton reset ---
+@mixin btn-reset {
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+
+// --- Transition personnalisée ---
+@mixin transition($props...) {
+  $result: ();
+  @each $prop in $props {
+    $result: list.append($result, $prop $transition-base, comma);
+  }
+  transition: $result;
+}

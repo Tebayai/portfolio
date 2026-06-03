@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio personnel",
+  "scripts": {
+    "sass": "sass assets/scss/main.scss assets/css/main.css --style expanded --source-map",
+    "sass:watch": "sass --watch assets/scss/main.scss assets/css/main.css --style expanded --source-map",
+    "build": "sass assets/scss/main.scss assets/css/main.css --style compressed --no-source-map"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.100.0"
+  }
+}

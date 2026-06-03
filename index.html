@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO -->
+    <meta name="description" content="Portfolio de Guillard — Développeur Web" />
+    <meta name="author" content="Guillard" />
+    <meta name="keywords" content="portfolio, développeur, web, frontend" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Font Awesome Free (CDN) -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+    <!-- Styles compilés depuis SCSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#hero" class="nav_logo"><img src="assets/images/logo.png" alt="Logo"></a>
+            <ul class="nav__list">
+                <li><a href="#about" class="nav_link">Home</a></li>
+                <li><a href="#projects" class="nav_link">Projets</a></li>
+                <li><a href="#contact" class="nav_link">Contact</a></li>
+            </ul>
+            <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN ===== -->
+    <main>
+        <!-- Hero -->
+        <section class="hero section" id="hero">
+            <div class="hero_label">
+                <div class="hero_label_info">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span class="hero_label_text">Disponible pour des missions freelance</span>
+                    <!-- ajoutte un btn rond vert en mode "on" -->
+                    <span class="hero_label_status"></span>
+                </div>
+            </div>
+            <div class="container">
+                <h1 class="hero_title">Salut, moi c'est Yvann ---</h1>
+                <p class="hero_subtitle">Je suis <span class="hero_subtitle_highlight">Développeur Web Front-End</span></p>
+                <p class="hero_desc">Développeur frontend & UI designer junior. Je conçois des interfaces rapides, accessibles et soignées au pixel près. Entre <span class="code-txt">"code"</span> et coups de crayon.</p>
+                <div class="hero_btn">
+                    <div class="btn btn_projects">
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <a href="#projects" class="btn btn--primary">Voir mes projets</a>
+                    </div>
+                    <div class="btn btn_CV">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <a href="assets/files/CV_Yvann_Guillard.pdf" class="btn btn--outline" download>Mon CV</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero_stack">
+                <span class="hero_stack_label">// STACK</span>
+                <div class="hero_stack_icons">
+                    <i class="fa-brands fa-html5" title="HTML5"></i>
+                    <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                    <i class="fa-brands fa-js" title="JavaScript"></i>
+                    <i class="fa-brands fa-sass" title="Sass"></i>
+                    <i class="fa-brands fa-php" title="PHP"></i>
+                    <i class="fa-brands fa-symfony" title="Symfony"></i>
+                    <i class="fa-brands fa-github" title="GitHub"></i>
+                    <i class="fa-brands fa-figma" title="Figma"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- À propos -->
+        <section class="about section" id="about">
+            <div class="container_left">
+                <img src="assets/images/profile.jpg" alt="Photo de profil" class="about_img" />
+            </div>
+            <div class="container_right">
+            <h2 class="section_title">À propos</h2>
+            <p class="about_text">Présente-toi ici...</p>
+            </div>
+        </section>
+
+        <!-- Projets -->
+        <section class="projects section" id="projects">
+            <div class="container">
+            <h2 class="section__title">Projets</h2>
+            <div class="projects__grid">
+                <!-- Exemple de carte projet -->
+                <article class="card">
+                <img src="assets/images/project-placeholder.jpg" alt="Projet 1" class="card__img" />
+                <div class="card__body">
+                    <h3 class="card__title">Projet 1</h3>
+                    <p class="card__desc">Description courte du projet.</p>
+                    <div class="card__links">
+                    <a href="#" class="btn btn--sm" aria-label="Voir le projet live">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                    </a>
+                    <a href="#" class="btn btn--sm btn--outline" aria-label="Voir le code source">
+                        <i class="fa-brands fa-github"></i> Code
+                    </a>
+                    </div>
+                </div>
+                </article>
+            </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact section" id="contact">
+            <div class="container">
+            <h2 class="section__title">Contact</h2>
+            <form class="contact__form" action="#" method="post" novalidate>
+                <div class="form__group">
+                <label for="name" class="form__label">Nom</label>
+                <input type="text" id="name" name="name" class="form__input" placeholder="Votre nom" required />
+                </div>
+                <div class="form__group">
+                <label for="email" class="form__label">Email</label>
+                <input type="email" id="email" name="email" class="form__input" placeholder="votre@email.com" required />
+                </div>
+                <div class="form__group">
+                <label for="message" class="form__label">Message</label>
+                <textarea id="message" name="message" class="form__textarea" rows="5" placeholder="Votre message..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary">
+                <i class="fa-solid fa-paper-plane"></i> Envoyer
+                </button>
+            </form>
+            </div>
+        </section>
+
+        </main>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer">
+        <div class="container">
+            <p class="footer__text">
+            &copy; <span id="year"></span> [Ton Nom]. Tous droits réservés.
+            </p>
+            <ul class="footer__socials">
+            <li><a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a></li>
+            </ul>
+        </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="assets/js/main.js" defer></script>
+    </body>
+</html>

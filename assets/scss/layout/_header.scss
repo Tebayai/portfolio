@@ -1,0 +1,70 @@
+// ===================================================
+// LAYOUT — HEADER & NAV
+// ===================================================
+@use '../abstracts' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: $z-sticky;
+  background: rgba($color-bg, 0.85);
+  backdrop-filter: blur(1.2rem);
+  border-bottom: 0.1rem solid $border-color;
+  @include transition(background, box-shadow);
+
+  &.scrolled {
+    box-shadow: $shadow-md;
+  }
+}
+
+.nav {
+  @include flex(row, space-between, center);
+  height: 6.4rem;
+
+  &__logo {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+    @include transition(opacity);
+
+    &:hover { opacity: 0.8; }
+  }
+
+  &__list {
+    @include flex(row, flex-end, center);
+    gap: $space-3;
+
+    // Masqué sur mobile
+    display: none;
+
+    @include respond-to($bp-sm) {
+      display: flex;
+    }
+  }
+
+  &__link {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    color: $color-text-muted;
+    @include transition(color);
+    @include focus-ring;
+
+    &:hover,
+    &.active {
+      color: $color-primary;
+    }
+  }
+
+  &__toggle {
+    @include btn-reset;
+    font-size: $font-size-lg;
+    color: $color-text;
+    @include focus-ring;
+
+    @include respond-to($bp-sm) {
+      display: none;
+    }
+  }
+}
