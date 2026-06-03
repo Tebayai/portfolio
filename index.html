@@ -94,64 +94,135 @@
                 <img src="assets/images/profile.jpg" alt="Photo de profil" class="about_img" />
             </div>
             <div class="container_right">
-            <h2 class="section_title">À propos</h2>
-            <p class="about_text">Présente-toi ici...</p>
+                <span class="about_label">// À propos</span>
+                <h2 class="section_title">Là où le code rencontre la créativité</h2>
+                <p class="about_text">Je suis développeur frontend junior avec un œil de designer. J'aime construire des interfaces qui se sentent aussi bien qu'elles se voient — pixel-perfect, accessibles et fluides. Issu d'un background UI/UX, je fais le pont entre l'intention de design et le produit livré. Quand je ne code pas, je prototype dans Figma, j'explore le motion design, ou j'apprends un nouvel outil à ajouter à ma boîte à outils. <span class="little_bugs">// 99 little bugs in the code...</span></p>
+            </div>
+            <div class="hero_btn">
+                <div class="btn btn_CV">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    <a href="assets/files/CV_Yvann_Guillard.pdf" class="btn btn--outline" download>Mon CV</a>
+                </div>
+                <div class="btn btn_portfolio">
+                    <a href="#projects" class="btn btn--primary">Voir le portfolio</a>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
             </div>
         </section>
 
         <!-- Projets -->
         <section class="projects section" id="projects">
-            <div class="container">
-            <h2 class="section__title">Projets</h2>
-            <div class="projects__grid">
-                <!-- Exemple de carte projet -->
-                <article class="card">
-                <img src="assets/images/project-placeholder.jpg" alt="Projet 1" class="card__img" />
-                <div class="card__body">
-                    <h3 class="card__title">Projet 1</h3>
-                    <p class="card__desc">Description courte du projet.</p>
-                    <div class="card__links">
-                    <a href="#" class="btn btn--sm" aria-label="Voir le projet live">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
-                    </a>
-                    <a href="#" class="btn btn--sm btn--outline" aria-label="Voir le code source">
-                        <i class="fa-brands fa-github"></i> Code
-                    </a>
+            <div class="title">
+                <span class="projects_label">// Projets</span>
+                <div class="projects_title">
+                    <h2 class="section_title">Quelques projets récents</h2>
+                    <div class="projects_nav">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        <a href="#!" class="btn btn--outline">Voir tous les projets</a>
                     </div>
                 </div>
-                </article>
             </div>
+            <div class="container container_right">
+                <div class="project_img">
+                    <img src="assets/images/project1.jpg" alt="Projet 1" />
+                </div>
+                <div class="project_content">
+                    <span class="project_label">// 01/02</span>
+                    <h3 class="project_title">Dashboard Analytics</h3>
+                    <p class="project_desc">Un dashboard d'analyse de données conçu pour une startup SaaS, mettant en avant des visualisations claires et une interface utilisateur intuitive.</p>
+                    <a href="#!" class="btn btn--primary">
+                        <span>Voir en ligne</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="container container_left">
+                <div class="project_img">
+                    <img src="assets/images/project1.jpg" alt="Projet 1" />
+                </div>
+                <div class="project_content">
+                    <span class="project_label">// 01/02</span>
+                    <h3 class="project_title">Dashboard Analytics</h3>
+                    <p class="project_desc">Un dashboard d'analyse de données conçu pour une startup SaaS, mettant en avant des visualisations claires et une interface utilisateur intuitive.</p>
+                    <a href="#!" class="btn btn--primary">
+                        <span>Voir en ligne</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="container container_right">
+                <div class="project_img">
+                    <img src="assets/images/project1.jpg" alt="Projet 1" />
+                </div>
+                <div class="project_content">
+                    <span class="project_label">// 01/02</span>
+                    <h3 class="project_title">Dashboard Analytics</h3>
+                    <p class="project_desc">Un dashboard d'analyse de données conçu pour une startup SaaS, mettant en avant des visualisations claires et une interface utilisateur intuitive.</p>
+                    <a href="#!" class="btn btn--primary">
+                        <span>Voir en ligne</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <!-- Contact -->
-        <section class="contact section" id="contact">
+        <!-- Compétences -->
+        <section class="skills section" id="skills">
             <div class="container">
-            <h2 class="section__title">Contact</h2>
-            <form class="contact__form" action="#" method="post" novalidate>
-                <div class="form__group">
-                <label for="name" class="form__label">Nom</label>
-                <input type="text" id="name" name="name" class="form__input" placeholder="Votre nom" required />
+                <span class="skills_label">// Boite à outils</span>
+                <h2 class="section_title">Compétences & Outils</h2>
+                <p>La stack que je dégaine pour livrer des interfaces belles et performantes.</p>
+                <span class="skills_subtitle">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                    <p>npm install --save talent passion</p>
+                    <i class="fa-solid fa-coffee"></i>
+                </span>
+            </div>
+            <div class="skills_content">
+                <div class="skills_front">
+                    <div class="skills_front_label">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Front-End</span>
+                    </div>
+                    <ul class="skills_front_list">
+                        <li>HTML5/CSS3</li>
+                        <li>Tailwind CSS</li>
+                        <li>JavaScript</li>
+                        <li>Sass</li>
+                    </ul>
                 </div>
-                <div class="form__group">
-                <label for="email" class="form__label">Email</label>
-                <input type="email" id="email" name="email" class="form__input" placeholder="votre@email.com" required />
+                <div class="skills_design">
+                    <div class="skills_design_label">
+                        <i class="fa-solid fa-palette"></i>
+                        <span>Design</span>
+                    </div>
+                    <ul class="skills_design_list">
+                        <li>Figma</li>
+                        <li>Illustrator</li>
+                        <li>Prototypage</li>
+                        <li>Motion design</li>
+                    </ul>
                 </div>
-                <div class="form__group">
-                <label for="message" class="form__label">Message</label>
-                <textarea id="message" name="message" class="form__textarea" rows="5" placeholder="Votre message..." required></textarea>
+                <div class="skills_other">
+                    <div class="skills_other_label">
+                        <i class="fa-solid fa-toolbox"></i>
+                        <span>Outils</span>
+                    </div>
+                    <ul class="skills_other_list">
+                        <li>Git/GitHub</li>
+                        <li>Vs code</li>
+                        <li>Docker</li>
+                        <li>Webpack</li>
+                        <li>npm</li>
+                    </ul>
                 </div>
-                <button type="submit" class="btn btn--primary">
-                <i class="fa-solid fa-paper-plane"></i> Envoyer
-                </button>
-            </form>
             </div>
         </section>
 
-        </main>
+    </main>
 
-        <!-- ===== FOOTER ===== -->
-        <footer class="footer">
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
         <div class="container">
             <p class="footer__text">
             &copy; <span id="year"></span> [Ton Nom]. Tous droits réservés.
@@ -162,9 +233,9 @@
             <li><a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a></li>
             </ul>
         </div>
-        </footer>
+    </footer>
 
-        <!-- Scripts -->
-        <script src="assets/js/main.js" defer></script>
-    </body>
+    <!-- Scripts -->
+    <script src="assets/js/main.js" defer></script>
+</body>
 </html>
