@@ -20,6 +20,7 @@
         justify-content: space-between;
         width: 100%;
         padding: 1rem 2rem;
+        position: relative;
         @include transition(background, box-shadow, border-radius, backdrop-filter);
 
         &.scrolled {
@@ -37,7 +38,29 @@
     }
 
     .nav_list{
-        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+
+        transition:
+            opacity 0.3s ease-out,
+            transform 0.3s ease-out,
+            visibility 0.3s;
+
+        display: flex;
+        flex-direction: column;
+
+        background-color: $color-bg;
+        border: 0.1rem solid $border-color;
+        border-radius: $border-radius-md;
+        box-shadow: $shadow-md;
+        padding: 1rem;
+
         
         li{
             list-style: none;
@@ -59,20 +82,48 @@
         }
     }
 
+    .nav_list.active{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(8px);
+        gap: 1rem;
+
+        li{
+            width: 100%;
+            a{
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+    .nav_toggle{
+        background: transparent;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+
+        i{
+            font-size: 2rem;
+        }
+    }
+
     @media (min-width: $bp-md) {
         .nav_list{
             display: flex;
+            flex-direction: row;
+            position: relative;
+            background: none;
+            border: none;
+            box-shadow: none;
+            opacity: 1;
+            visibility: visible;
             gap: 2.4rem;
+            transform: none;
         }
 
         .nav_toggle{
             display: none;
         }
     }
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    top: 5.6rem;
 }
