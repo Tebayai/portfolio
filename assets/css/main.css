@@ -378,4 +378,124 @@ body {
   color: #4F97E8;
 }
 
+.skills .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.skills .container .skills_label {
+  color: #4F565E;
+  font-size: 1.4rem;
+}
+.skills .container .section_title {
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+.skills .container .section_title .green-txt {
+  color: #6c63ff;
+}
+.skills .container > p {
+  color: #4F565E;
+  max-width: 600px;
+  font-weight: 500;
+}
+.skills .skills_subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: #14191F;
+  border: 0.1rem solid #25292E;
+  border-radius: 0.8rem;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  max-width: 500px;
+}
+.skills .skills_subtitle i {
+  color: #6c63ff;
+  font-size: 2.4rem;
+}
+.skills .skills_subtitle p {
+  color: #e8e8f0;
+  font-family: "Courier New", monospace;
+  font-size: 1.4rem;
+  margin: 0;
+}
+.skills .skills_content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+@media (min-width: 75em) {
+  .skills .skills_content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.skills .skills_card {
+  background: #14191F;
+  border: 0.1rem solid #25292E;
+  border-radius: 1.6rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.skills .skills_card_header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.skills .skills_card_header i {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(108, 99, 255, 0.1);
+  border-radius: 0.8rem;
+  color: #6c63ff;
+  font-size: 1.2rem;
+}
+.skills .skills_card_header span {
+  color: #e8e8f0;
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+.skills .skills_card_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.skills .skills_card_list li {
+  color: #4F565E;
+  padding: 0.75rem;
+  background: rgba(108, 99, 255, 0.05);
+  border-radius: 0.4rem;
+  text-align: center;
+  font-size: 1.4rem;
+  border: 0.1rem solid rgba(108, 99, 255, 0.1);
+  transition: all 0.3s ease;
+}
+.skills .skills_card_list li:hover {
+  background: rgba(108, 99, 255, 0.1);
+  border-color: rgba(108, 99, 255, 0.3);
+  color: #e8e8f0;
+}
+@media (max-width: 62em) {
+  .skills .skills_content {
+    grid-template-columns: 1fr;
+  }
+  .skills .skills_subtitle {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
