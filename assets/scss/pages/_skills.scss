@@ -4,6 +4,8 @@
 @use '../abstracts' as *;
 
 .skills {
+    margin: 0 1.5rem;
+
     .container {
         display: flex;
         flex-direction: column;
@@ -17,13 +19,8 @@
             font-size: $font-size-sm;
         }
 
-        .section_title {
-            font-size: $font-size-2xl;
-            font-weight: $font-weight-bold;
-
-            .green-txt {
-                color: $color-primary;
-            }
+        .green-txt {
+            color: $color-green1;
         }
 
         > p {

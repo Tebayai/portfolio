@@ -378,6 +378,9 @@ body {
   color: #4F97E8;
 }
 
+.skills {
+  margin: 0 1.5rem;
+}
 .skills .container {
   display: flex;
   flex-direction: column;
@@ -390,12 +393,8 @@ body {
   color: #4F565E;
   font-size: 1.4rem;
 }
-.skills .container .section_title {
-  font-size: 4.8rem;
-  font-weight: 700;
-}
-.skills .container .section_title .green-txt {
-  color: #6c63ff;
+.skills .container .green-txt {
+  color: #238537;
 }
 .skills .container > p {
   color: #4F565E;
