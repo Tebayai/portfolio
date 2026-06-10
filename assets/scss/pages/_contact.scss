@@ -2,3 +2,148 @@
 // PAGE — CONTACT
 // ===================================================
 @use '../abstracts' as *;
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+
+    .contact_label {
+        color: $color-blue1;
+        text-transform: uppercase;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-sm;
+    }
+
+    .section_title {
+
+        .green-txt {
+            color: $color-green1;
+        }
+    }
+
+    .contact_subtitle {
+        font-size: $font-size-lg;
+        color: $color-text-muted;
+        font-weight: $font-weight-medium;
+    }
+
+    .contact_desc {
+        color: $color-text-muted;
+        font-size: $font-size-base;
+        line-height: 1.6;
+    }
+
+    .contact_code {
+        color: $color-text-muted;
+        font-size: $font-size-sm;
+        margin: 1rem 0;
+
+        & .blue-txt {
+            color: $color-blue1;
+        }
+
+        & .green-txt {
+            color: $color-green1;
+        }
+    }
+
+    .contact_info {
+        display: flex;
+        align-items: flex-start;
+        gap: 3rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+
+        @media (max-width: $bp-sm) {
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+
+    .contact_info_item {
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+
+        .contact_info_icon {
+            width: 5rem;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $color-bg-alt;
+            border: 0.1rem solid $color-border;
+            border-radius: $border-radius-md;
+            color: $color-green1;
+            font-size: $font-size-lg;
+            flex-shrink: 0;
+        }
+
+        .contact_info_content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+
+            h3 {
+                font-size: $font-size-sm;
+                font-weight: $font-weight-semibold;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                color: $color-text-muted;
+            }
+
+            a,
+            p {
+                font-size: $font-size-base;
+                color: $color-text;
+                text-decoration: none;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $color-green1;
+                }
+            }
+        }
+    }
+
+    .contact_socials {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .contact_social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5rem;
+        height: 5rem;
+        background-color: $color-bg-alt;
+        border: 0.1rem solid $color-border;
+        border-radius: $border-radius-md;
+        color: $color-text;
+        font-size: $font-size-lg;
+        text-decoration: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $color-green1;
+            border-color: $color-green1;
+            color: $color-bg;
+            transform: translateY(-3px);
+        }
+    }
+
+    @media (min-width: $bp-md) {
+
+        .container {
+            align-items: center;
+            text-align: center;
+
+            .contact_info {
+                justify-content: center;
+            }
+        }
+    }
+}

@@ -32,9 +32,9 @@ body {
 }
 
 h2 {
-  font-size: 2.4rem;
-  font-weight: 600;
-  line-height: 30px;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 3.5rem;
 }
 
 section,
@@ -626,6 +626,130 @@ footer .footer_bottom .footer_copyright {
   /* background: rgba($color-green1, 0.1); */
   border: 0.1rem solid rgba(35, 133, 55, 0.5);
   color: #e8e8f0;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+}
+.contact .contact_label {
+  color: #4F97E8;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+.contact .section_title .green-txt {
+  color: #238537;
+}
+.contact .contact_subtitle {
+  font-size: 2.4rem;
+  color: #6f767e;
+  font-weight: 500;
+}
+.contact .contact_desc {
+  color: #6f767e;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.contact .contact_code {
+  color: #6f767e;
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+.contact .contact_code .blue-txt {
+  color: #4F97E8;
+}
+.contact .contact_code .green-txt {
+  color: #238537;
+}
+.contact .contact_info {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 48em) {
+  .contact .contact_info {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+.contact .contact_info_item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+.contact .contact_info_item .contact_info_icon {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #14191F;
+  border: 0.1rem solid #25292E;
+  border-radius: 0.8rem;
+  color: #238537;
+  font-size: 2.4rem;
+  flex-shrink: 0;
+}
+.contact .contact_info_item .contact_info_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.contact .contact_info_item .contact_info_content h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6f767e;
+}
+.contact .contact_info_item .contact_info_content a,
+.contact .contact_info_item .contact_info_content p {
+  font-size: 1.6rem;
+  color: #e8e8f0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.contact .contact_info_item .contact_info_content a:hover,
+.contact .contact_info_item .contact_info_content p:hover {
+  color: #238537;
+}
+.contact .contact_socials {
+  display: flex;
+  gap: 1rem;
+}
+.contact .contact_social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  background-color: #14191F;
+  border: 0.1rem solid #25292E;
+  border-radius: 0.8rem;
+  color: #e8e8f0;
+  font-size: 2.4rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.contact .contact_social:hover {
+  background-color: #238537;
+  border-color: #238537;
+  color: #0f0f13;
+  transform: translateY(-3px);
+}
+@media (min-width: 62em) {
+  .contact .container {
+    align-items: center;
+    text-align: center;
+  }
+  .contact .container .contact_info {
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
