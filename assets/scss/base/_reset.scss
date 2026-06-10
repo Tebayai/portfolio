@@ -40,6 +40,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h2{
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  line-height: 30px;
+}
+
 // Accessibilité : masquer visuellement sans retirer du flux
 .sr-only {
   position: absolute;

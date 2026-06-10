@@ -31,6 +31,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 30px;
+}
+
 .sr-only {
   position: absolute;
   width: 0.1rem;
@@ -170,6 +176,15 @@ body {
   background-color: rgba(232, 232, 240, 0.1);
 }
 
+.see_all {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -200,7 +215,7 @@ body {
   align-items: center;
   gap: 0.8rem;
   background: #14191F;
-  color: #4F565E;
+  color: #6f767e;
   border-radius: 9999px;
   border: 0.1rem solid #25292E;
   padding: 0.4rem 1rem;
@@ -229,7 +244,7 @@ body {
   gap: 1rem;
 }
 .hero .container .hero_label_title {
-  color: #4F565E;
+  color: #6f767e;
 }
 .hero .container .hero_subtitle {
   font-size: 3.2rem;
@@ -237,7 +252,7 @@ body {
 }
 .hero .container .hero_desc {
   text-align: center;
-  color: #4F565E;
+  color: #6f767e;
   font-weight: 500;
 }
 .hero .container .hero_desc .code-txt {
@@ -256,7 +271,7 @@ body {
   gap: 1rem;
 }
 .hero .hero_stack .hero_stack_label {
-  color: #4F565E;
+  color: #6f767e;
   font-size: 1.4rem;
 }
 .hero .hero_stack .hero_stack_icons {
@@ -320,7 +335,7 @@ body {
   color: #238537;
 }
 .about .container_right .about_text {
-  color: #4F565E;
+  color: #6f767e;
 }
 .about .hero_btn {
   display: flex;
@@ -332,28 +347,20 @@ body {
 .projects {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 4rem;
   margin: 0 1.5rem 7rem;
 }
+.projects .projects_label {
+  color: #4F97E8;
+  text-transform: uppercase;
+}
 .projects .section_title {
   font-weight: 600;
-  text-align: center;
 }
 .projects .section_title .green-txt {
   color: #238537;
 }
-.projects .projects_list {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-.projects .projects_list .project_item {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.projects .projects_list .project_item .project_img {
+.projects .project_img {
   width: 100%;
   height: auto;
   border-radius: 0.8rem;
@@ -362,19 +369,18 @@ body {
   background-color: #14191F;
   object-fit: cover;
 }
-.projects .projects_list .project_item .project_info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.projects .projects_list .project_item .project_info .project_title {
+.projects .project_title {
   font-size: 2.4rem;
   font-weight: 600;
 }
-.projects .projects_list .project_item .project_info .project_desc {
-  color: #4F565E;
+.projects .project_label {
+  color: #238537;
+  text-transform: uppercase;
 }
-.projects .projects_list .project_item .project_info .project_desc .code-txt {
+.projects .project_desc {
+  color: #6f767e;
+}
+.projects .project_desc .code-txt {
   color: #4F97E8;
 }
 
@@ -385,19 +391,20 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   text-align: center;
   margin-bottom: 3rem;
 }
 .skills .container .skills_label {
-  color: #4F565E;
+  color: #4F97E8;
   font-size: 1.4rem;
+  font-weight: 500;
 }
 .skills .container .green-txt {
   color: #238537;
 }
 .skills .container > p {
-  color: #4F565E;
+  color: #6f767e;
   max-width: 600px;
   font-weight: 500;
 }
@@ -406,22 +413,16 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background: #14191F;
-  border: 0.1rem solid #25292E;
-  border-radius: 0.8rem;
   padding: 1rem 1.5rem;
   width: 100%;
   max-width: 500px;
 }
 .skills .skills_subtitle i {
-  color: #6c63ff;
-  font-size: 2.4rem;
+  color: #4F97E8;
 }
 .skills .skills_subtitle p {
-  color: #e8e8f0;
-  font-family: "Courier New", monospace;
+  color: #6f767e;
   font-size: 1.4rem;
-  margin: 0;
 }
 .skills .skills_content {
   display: grid;
@@ -454,9 +455,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(108, 99, 255, 0.1);
+  background: rgba(35, 133, 55, 0.1);
   border-radius: 0.8rem;
-  color: #6c63ff;
+  color: #238537;
   font-size: 1.2rem;
 }
 .skills .skills_card_header span {
@@ -473,28 +474,18 @@ body {
   margin: 0;
 }
 .skills .skills_card_list li {
-  color: #4F565E;
+  color: #6f767e;
   padding: 0.75rem;
-  background: rgba(108, 99, 255, 0.05);
+  background: #161C23;
   border-radius: 0.4rem;
-  text-align: center;
   font-size: 1.4rem;
-  border: 0.1rem solid rgba(108, 99, 255, 0.1);
+  border: 0.1rem solid transparent;
   transition: all 0.3s ease;
 }
 .skills .skills_card_list li:hover {
-  background: rgba(108, 99, 255, 0.1);
-  border-color: rgba(108, 99, 255, 0.3);
+  /* background: rgba($color-green1, 0.1); */
+  border: 0.1rem solid rgba(35, 133, 55, 0.5);
   color: #e8e8f0;
-}
-@media (max-width: 62em) {
-  .skills .skills_content {
-    grid-template-columns: 1fr;
-  }
-  .skills .skills_subtitle {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */

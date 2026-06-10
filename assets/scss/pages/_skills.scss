@@ -10,13 +10,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
+        gap: 1rem;
         text-align: center;
         margin-bottom: 3rem;
 
         .skills_label {
-            color: $color-text-muted;
+            color: $color-blue1;
             font-size: $font-size-sm;
+            font-weight: $font-weight-medium;
         }
 
         .green-txt {
@@ -35,23 +36,17 @@
         align-items: center;
         justify-content: center;
         gap: 1rem;
-        background: $color-bg-alt;
-        border: 0.1rem solid $color-border;
-        border-radius: $border-radius-md;
         padding: 1rem 1.5rem;
         width: 100%;
         max-width: 500px;
 
         i {
-            color: $color-primary;
-            font-size: $font-size-lg;
+            color: $color-blue1;
         }
 
         p {
-            color: $color-text;
-            font-family: 'Courier New', monospace;
+            color: $color-text-muted;
             font-size: $font-size-sm;
-            margin: 0;
         }
     }
 
@@ -86,9 +81,9 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background: rgba($color-primary, 0.1);
+                background: rgba($color-green1, 0.1);
                 border-radius: $border-radius-md;
-                color: $color-primary;
+                color: $color-green1;
                 font-size: 1.2rem;
             }
 
@@ -110,30 +105,18 @@
             li {
                 color: $color-text-muted;
                 padding: 0.75rem;
-                background: rgba($color-primary, 0.05);
+                background: #161C23;
                 border-radius: $border-radius-sm;
-                text-align: center;
                 font-size: $font-size-sm;
-                border: 0.1rem solid rgba($color-primary, 0.1);
+                border: 0.1rem solid transparent;
                 transition: all 0.3s ease;
 
                 &:hover {
-                    background: rgba($color-primary, 0.1);
-                    border-color: rgba($color-primary, 0.3);
+                    /* background: rgba($color-green1, 0.1); */
+                    border: 0.1rem solid rgba($color-green1, 0.5);
                     color: $color-text;
                 }
             }
-        }
-    }
-
-    @media (max-width: $bp-md) {
-        .skills_content {
-            grid-template-columns: 1fr;
-        }
-
-        .skills_subtitle {
-            flex-direction: column;
-            gap: 0.8rem;
         }
     }
 }

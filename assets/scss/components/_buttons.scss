@@ -27,3 +27,12 @@
         background-color: rgba($color-text, 0.1);
     }
 }
+
+.see_all{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $color-white;
+    font-weight: $font-weight-medium;
+    text-decoration: none;
+}
