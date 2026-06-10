@@ -2,3 +2,205 @@
 // PAGE — PROJECTS
 // ===================================================
 @use '../abstracts' as *;
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 0 1.5rem 7rem;
+
+    @media (min-width: $bp-md) {
+        margin: 0 5rem 7rem;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .projects_label {
+        color: $color-blue1;
+        text-transform: uppercase;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-sm;
+    }
+
+    .projects_title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+
+        .section_title {
+            .green-txt {
+                color: $color-green1;
+            }
+        }
+
+        .see_all {
+            white-space: nowrap;
+        }
+    }
+}
+
+// Mac Window Style
+.project_img {
+    width: 100%;
+    height: auto;
+
+    .mac-window {
+        background-color: $color-bg-alt;
+        border: 0.1rem solid $color-border;
+        border-radius: 0.8rem;
+        overflow: hidden;
+        box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 3rem 8rem rgba($color-green1, 0.15);
+        }
+    }
+
+    .mac-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        background: linear-gradient(180deg, #1a1f28 0%, #141a22 100%);
+        border-bottom: 0.1rem solid $color-border;
+        padding: 0.8rem 1rem;
+        height: 3.2rem;
+    }
+
+    .mac-buttons {
+        display: flex;
+        gap: 0.6rem;
+        align-items: center;
+    }
+
+    .mac-btn {
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &.mac-btn-red {
+            background-color: #ff5f57;
+        }
+
+        &.mac-btn-yellow {
+            background-color: #ffbd2e;
+        }
+
+        &.mac-btn-green {
+            background-color: #28c940;
+        }
+    }
+
+    .mac-title {
+        font-size: 0.8rem;
+        color: $color-text-muted;
+        flex: 1;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .mac-content {
+        background-color: $color-bg;
+        padding: 1.5rem;
+        min-height: 20rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.4rem;
+            max-height: 30rem;
+        }
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @media (max-width: $bp-md) {
+        flex-direction: column;
+    }
+
+    &.container_right {
+        flex-direction: row;
+
+        @media (max-width: $bp-md) {
+            flex-direction: column;
+        }
+
+        .project_img {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .project_content {
+            flex: 1;
+        }
+    }
+
+    &.container_left {
+        flex-direction: row-reverse;
+
+        @media (max-width: $bp-md) {
+            flex-direction: column;
+        }
+
+        .project_img {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .project_content {
+            flex: 1;
+        }
+    }
+}
+
+.project_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .project_label {
+        color: $color-blue1;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-semibold;
+        text-transform: uppercase;
+    }
+
+    .project_title {
+        font-size: $font-size-xl;
+        font-weight: $font-weight-semibold;
+        color: $color-text;
+    }
+
+    .project_desc {
+        color: $color-text-muted;
+        line-height: 1.6;
+    }
+
+    .see_all {
+        align-self: flex-start;
+        margin-top: 0.5rem;
+    }
+}
