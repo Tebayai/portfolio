@@ -15,53 +15,66 @@
     margin: 3rem 1.5rem;
 }
 
-.footer{
-    margin: 1.5rem;
+footer{
+    .footer_content{
 
-    .footer_desc{
-        margin: $space-2 0;
-        color: $color-text-muted;
-    }
+        @media (min-width: $bp-sm) {
+            display: flex;
+            justify-content: space-between;
+        }
 
-    h3{
-        font-size: $font-size-md;
-        font-weight: $font-weight-medium;
-        margin-bottom: $space-1;
-        color: $color-text-muted;
-    }
+        .footer_left{
+            @media (min-width: $bp-sm) {
+                width: 40%;
+            }
+        }
 
-    li{
-        list-style: none;
-        margin-bottom: $space-1;
-    }
-
-    a{
-        display: flex;
-        align-items: center;
-        gap: 0.8rem;
-        color: $color-text;
-        font-size: $font-size-sm;
-        transition: color 0.3s;
-        text-decoration: none;
-
-        &:hover{
+        .footer_desc{
+            margin: $space-2 0;
             color: $color-text-muted;
         }
-    }
 
-    .footer_socials{
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        margin-top: $space-2;
+        h3{
+            font-size: $font-size-md;
+            font-weight: $font-weight-medium;
+            margin-bottom: $space-1;
+            color: $color-text-muted;
+        }
 
         li{
-            font-size: 2rem;
-            background: $color-bg;
-            border: 1px solid $color-border;
-            border-radius: $border-radius-md;
-            padding: $space-1;
+            list-style: none;
+            margin-bottom: $space-1;
         }
+
+        a{
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: $color-text;
+            font-size: $font-size-sm;
+            transition: color 0.3s;
+            text-decoration: none;
+
+            &:hover{
+                color: $color-text-muted;
+            }
+        }
+
+        .footer_socials{
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: $space-2;
+
+            li{
+                font-size: 2rem;
+                background: $color-bg;
+                border: 1px solid $color-border;
+                border-radius: $border-radius-md;
+                padding: $space-1;
+            }
+        }
+
     }
 
     .footer_bottom{

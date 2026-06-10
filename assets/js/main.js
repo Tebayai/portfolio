@@ -32,3 +32,50 @@ openMenu.addEventListener('click', () =>{
 
     navList.classList.toggle('active');
 })
+
+// Typewriter effect for roles
+const subtitle = document.querySelector('.hero_subtitle_highlight');
+const roles = ['Développeur', 'Designer UI/UX'];
+
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let isPaused = false;
+
+// Créer le curseur s'il n'existe pas
+if (!document.querySelector('.typewriter-cursor')) {
+    const cursor = document.createElement('span');
+    cursor.className = 'typewriter-cursor';
+    subtitle.appendChild(cursor);
+}
+
+function type() {
+    const currentRole = roles[roleIndex];
+    const cursor = document.querySelector('.typewriter-cursor');
+    
+    if (isDeleting) {
+        subtitle.textContent = currentRole.substring(0, charIndex - 1);
+        subtitle.appendChild(cursor);
+        charIndex--;
+        if (charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+        }
+    } else {
+        subtitle.textContent = currentRole.substring(0, charIndex + 1);
+        subtitle.appendChild(cursor);
+        charIndex++;
+        if (charIndex === currentRole.length) {
+            isPaused = true;
+            setTimeout(() => {
+                isDeleting = true;
+                isPaused = false;
+                type();
+            }, 1500);
+            return;
+        }
+    }
+    setTimeout(type, isDeleting ? 50 : 100);
+}
+
+type();

@@ -9,7 +9,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 1.5rem;
     gap: 3rem;
     margin-bottom: 7rem;
     position: relative;
@@ -93,6 +92,33 @@
         .hero_subtitle{
             font-size: $font-size-xl;
             font-weight: $font-weight-semibold;
+
+            .hero_subtitle_highlight{
+                color: $color-green1;
+            }
+
+            .typewriter-cursor {
+                display: inline-block;
+                width: 0.15rem;
+                height: 1em;
+                background-color: $color-blue1;
+                margin-left: 0.2rem;
+                animation: blink 0.7s infinite;
+            }
+
+            @keyframes blink {
+                0%, 49% {
+                    opacity: 1;
+                }
+                50%, 100% {
+                    opacity: 0;
+                }
+            }
+
+            @media (min-width: $bp-sm) {
+                font-size: $font-size-2xl;
+                font-weight: $font-weight-bold;
+            }
         }
 
         .hero_desc{
@@ -111,6 +137,10 @@
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+
+        @media (min-width: $bp-sm) {
+            flex-direction: row;
+        }
     }
 
     .hero_stack{
@@ -145,10 +175,10 @@
                 justify-content: center;
             }
         }
-    }
 
-    @media (min-width: $bp-md) {
-        margin: 0 5rem;
+        @media (min-width: $bp-sm) {
+            margin-top: 2rem;
+        }
     }
 }
 
@@ -159,7 +189,6 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    margin: 0 1.5rem 7rem;
 
     .about_img{
         width: 100%;
@@ -195,6 +224,10 @@
         .about_text{
             color: $color-text-muted;
         }
+
+        @media (min-width: $bp-md) {
+            width: 80%;
+        }
     }
 
     .hero_btn{
@@ -202,6 +235,14 @@
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
+
+        @media (min-width: $bp-sm) {
+            flex-direction: row;
+        }
+    }
+
+    @media (min-width: $bp-md) {
+        flex-direction: row;
     }
 }
 
@@ -211,7 +252,6 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    margin: 0 1.5rem 7rem;
 
     .projects_label{
         color: $color-blue1;
