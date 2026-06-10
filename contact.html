@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO -->
+    <meta name="description" content="Portfolio de Guillard — Me Contacter" />
+    <meta name="author" content="Guillard" />
+    <meta name="keywords" content="portfolio, contact, développeur, web, frontend" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Font Awesome Free (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Styles compilés depuis SCSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <title>Contact - Portfolio</title>
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav_logo">
+                <i class="fa-solid fa-code"></i>
+                <span>Tebayai</span>
+            </a>
+            <ul class="nav_list">
+                <li><a href="index.html" class="nav_link">Home</a></li>
+                <li><a href="projects.html" class="nav_link">Projets</a></li>
+                <li><a href="contact.html" class="nav_link">Contact</a></li>
+            </ul>
+            <button class="nav_toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars" style="color: rgb(255, 255, 255);"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN ===== -->
+    <main>
+        <!-- Contact -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <span class="contact_label">// Contact</span>
+                <h2 class="section_title">Envoyez-moi un <span class="green-txt">message</span></h2>
+                <p class="contact_desc">Des questions ? Un projet en tête ? N'hésitez pas à me contacter, je vous répondrai au plus vite.</p>
+                
+                <div class="contact_content">
+                    <!-- Contact Form -->
+                    <form class="contact_form" id="contactForm">
+                        <div class="form_group">
+                            <label for="name" class="form_label">Nom</label>
+                            <input type="text" id="name" name="name" class="form_input" required />
+                        </div>
+
+                        <div class="form_group">
+                            <label for="email" class="form_label">Email</label>
+                            <input type="email" id="email" name="email" class="form_input" required />
+                        </div>
+
+                        <div class="form_group">
+                            <label for="subject" class="form_label">Sujet</label>
+                            <input type="text" id="subject" name="subject" class="form_input" required />
+                        </div>
+
+                        <div class="form_group">
+                            <label for="message" class="form_label">Message</label>
+                            <textarea id="message" name="message" class="form_input form_textarea" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Envoyer</span>
+                        </button>
+                    </form>
+
+                    <!-- Contact Info -->
+                    <div class="contact_info">
+                        <div class="contact_info_item">
+                            <div class="contact_info_icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="contact_info_content">
+                                <h3>Email</h3>
+                                <a href="mailto:hello@guillard.dev">hello@guillard.dev</a>
+                            </div>
+                        </div>
+
+                        <div class="contact_info_item">
+                            <div class="contact_info_icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="contact_info_content">
+                                <h3>Téléphone</h3>
+                                <a href="tel:+33612345678">+33 6 12 34 56 78</a>
+                            </div>
+                        </div>
+
+                        <div class="contact_info_item">
+                            <div class="contact_info_icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="contact_info_content">
+                                <h3>Localisation</h3>
+                                <p>France</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer section" id="footer">
+        <div class="container">
+            <div class="footer_content">
+                <!-- Footer Left -->
+                <div class="footer_left">
+                    <div class="footer_brand">
+                        <i class="fa-solid fa-code"></i>
+                        <span>GUILLARD</span>
+                    </div>
+                    <p class="footer_desc">Développeur frontend & UI designer junior. Je conçois des interfaces rapides, accessibles et soignées au pixel près.</p>
+                </div>
+
+                <!-- Footer Center -->
+                <div class="footer_center">
+                    <div class="footer_section">
+                        <h3 class="footer_title">NAVIGUER</h3>
+                        <ul class="footer_links">
+                            <li><a href="index.html" class="footer_link">Accueil</a></li>
+                            <li><a href="projects.html" class="footer_link">Projets</a></li>
+                            <li><a href="contact.html" class="footer_link">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Right -->
+                <div class="footer_right">
+                    <div class="footer_section">
+                        <h3 class="footer_title">ME CONTACTER</h3>
+                        <a href="mailto:hello@example.com" class="footer_email">
+                            <i class="fa-solid fa-envelope"></i>
+                            hello@guillard.dev
+                        </a>
+                        <ul class="footer_socials">
+                            <li><a href="#" aria-label="GitHub" class="footer_social"><i class="fa-brands fa-github"></i></a></li>
+                            <li><a href="#" aria-label="LinkedIn" class="footer_social"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href="#" aria-label="Email" class="footer_social"><i class="fa-solid fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer_bottom">
+                <p class="footer_copyright">© <span id="year"></span> Guillard. Codé avec <i class="fa-solid fa-heart" style="color: #ff6b6b;"></i> et beaucoup de café.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
