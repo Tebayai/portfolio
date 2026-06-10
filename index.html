@@ -24,7 +24,10 @@
     <!-- ===== HEADER ===== -->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#hero" class="nav_logo"><img src="assets/images/logo_temp.png" alt="Logo"></a>
+            <a href="#hero" class="nav_logo"><!-- <img src="assets/images/logo_temp.png" alt="Logo"> -->
+                <i class="fa-solid fa-code"></i>
+                <span>Tebayai</span>
+            </a>
             <ul class="nav_list">
                 <li><a href="#about" class="nav_link">Home</a></li>
                 <li><a href="#projects" class="nav_link">Projets</a></li>
@@ -57,9 +60,9 @@
                     <i class="fa-solid fa-arrow-down"></i>
                     <span>Voir mes projets</span>
                 </a>
-                <a href="assets/files/CV_Yvann_Guillard.pdf" class="btn btn--outline" download>
+                <a href="assets/files/CV_Guillard_Yvannerick.pdf" class="btn btn--outline" target="_blank">
                     <i class="fa-solid fa-file-arrow-down"></i>
-                    <span>Télécharger le CV</span>
+                    <span>Curriculum vitae</span>
                 </a>
             </div>
             <div class="hero_stack">
@@ -88,12 +91,12 @@
                 <p class="about_text">Je suis développeur frontend junior avec un œil de designer. J'aime construire des interfaces qui se sentent aussi bien qu'elles se voient — pixel-perfect, accessibles et fluides. Issu d'un background UI/UX, je fais le pont entre l'intention de design et le produit livré. Quand je ne code pas, je prototype dans Figma, j'explore le motion design, ou j'apprends un nouvel outil à ajouter à ma boîte à outils. <span class="green-txt">// 99 little bugs in the code...</span></p>
             </div>
             <div class="hero_btn">
-                <a href="assets/files/CV_Yvann_Guillard.pdf" class="btn btn--outline" download>
+                <a href="assets/files/CV_Guillard_Yvannerick.pdf" class="btn btn--outline" download>
                     <i class="fa-solid fa-file-arrow-down"></i>
                     <span>Télécharger le CV</span>
                 </a>
                     
-                <a href="#projects" class="btn btn--primary">
+                <a href="assets/files/GUILLARD_Yvannerick_portfolio.pdf" class="btn btn--primary" target="_blank">
                     <span>Voir le portfolio</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -215,17 +218,54 @@
 
     </main>
 
+    <hr class="separator" />
+
     <!-- ===== FOOTER ===== -->
-    <footer class="footer">
+    <footer class="footer section" id="footer">
         <div class="container">
-            <p class="footer__text">
-            &copy; <span id="year"></span> Tebayai. Tous droits réservés.
-            </p>
-            <ul class="footer__socials">
-            <li><a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
-            <li><a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a></li>
-            </ul>
+            <div class="footer_content">
+                <!-- Footer Left -->
+                <div class="footer_left">
+                    <div class="footer_brand">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Tebayai</span>
+                    </div>
+                    <p class="footer_desc">Développeur frontend & UI designer junior. Je conçois des interfaces rapides, accessibles et soignées au pixel près.</p>
+                </div>
+
+                <!-- Footer Center -->
+                <div class="footer_center">
+                    <div class="footer_section">
+                        <h3 class="footer_title">NAVIGUER</h3>
+                        <ul class="footer_links">
+                            <li><a href="#hero" class="footer_link">Accueil</a></li>
+                            <li><a href="#projects" class="footer_link">Projets</a></li>
+                            <li><a href="#contact" class="footer_link">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Right -->
+                <div class="footer_right">
+                    <div class="footer_section">
+                        <h3 class="footer_title">ME CONTACTER</h3>
+                        <a href="mailto:yvannerick.pro@gmail.com" class="footer_email">
+                            <i class="fa-solid fa-envelope"></i>
+                            yvannerick.pro@gmail.com
+                        </a>
+                        <ul class="footer_socials">
+                            <li><a href="https://github.com/Tebayai" aria-label="GitHub" class="footer_social"><i class="fa-brands fa-github"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/yvann-erick-guillard-683b73285/" aria-label="LinkedIn" class="footer_social"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href="mailto:yvannerick.pro@gmail.com" aria-label="Email" class="footer_social"><i class="fa-solid fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer_bottom">
+                <p class="footer_copyright">© <span id="year"></span>2026 Tebayai. Codé avec <i class="fa-solid fa-heart" style="color: #6c63ff;"></i></p>
+            </div>
         </div>
     </footer>
 

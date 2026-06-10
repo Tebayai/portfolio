@@ -2,3 +2,77 @@
 // LAYOUT — FOOTER
 // ===================================================
 @use '../abstracts' as *;
+
+.separator{
+    border: none;
+    height: 0.1rem;
+    background: linear-gradient(
+        90deg,
+        rgba($color-green1, 0) 0%,
+        $color-green1 50%,
+        rgba($color-green1, 0) 100%
+    );
+    margin: 3rem 1.5rem;
+}
+
+.footer{
+    margin: 1.5rem;
+
+    .footer_desc{
+        margin: $space-2 0;
+        color: $color-text-muted;
+    }
+
+    h3{
+        font-size: $font-size-md;
+        font-weight: $font-weight-medium;
+        margin-bottom: $space-1;
+        color: $color-text-muted;
+    }
+
+    li{
+        list-style: none;
+        margin-bottom: $space-1;
+    }
+
+    a{
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        color: $color-text;
+        font-size: $font-size-sm;
+        transition: color 0.3s;
+        text-decoration: none;
+
+        &:hover{
+            color: $color-text-muted;
+        }
+    }
+
+    .footer_socials{
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: $space-2;
+
+        li{
+            font-size: 2rem;
+            background: $color-bg;
+            border: 1px solid $color-border;
+            border-radius: $border-radius-md;
+            padding: $space-1;
+        }
+    }
+
+    .footer_bottom{
+        margin-top: $space-4;
+        border-top: 1px solid $color-border;
+        padding-top: $space-2;
+        text-align: center;
+
+        .footer_copyright{
+            font-size: $font-size-sm;
+            color: $color-text-muted;
+        }
+    }
+}
